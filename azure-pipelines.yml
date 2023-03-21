@@ -22,7 +22,8 @@ steps:
 - task: PowerPlatformToolInstaller@2
   inputs:
     DefaultVersion: true
-- task: PowerPlatformWhoAmi@2
+- task: PowerPlatformDownloadPaportal@2
   inputs:
     authenticationType: 'PowerPlatformEnvironment'
-        
+    DownloadPath: 'c:\azpac-portals\downloads'
+    WebsiteId: 'a9e77e5c-8ab7-ed11-83fe-000d3adbbc34'
