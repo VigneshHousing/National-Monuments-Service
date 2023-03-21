@@ -20,14 +20,9 @@ steps:
 
 
 
-
-- task: PowerShell@2
+- task: DotNetCoreCLI@2
   inputs:
-    targetType: 'inline'
-    script: |
-        - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.tool-installer.PowerPlatformToolInstaller@0
-          displayName: 'Power Platform Tool Installer'
-        inputs:
-          DefaultVersion: false
-          XrmToolingPackageDeploymentVersion: 3.3.0.928
+    command: 'custom'
+    custom: '- name: powerplatform-actions   uses: microsoft/powerplatform-actions@v0.10.3'
+
         
