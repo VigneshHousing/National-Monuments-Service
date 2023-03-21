@@ -17,3 +17,13 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+
+- task: PowerPlatformToolInstaller@2
+  inputs:
+    DefaultVersion: true
+- task: PowerPlatformDownloadPaportal@2
+  inputs:
+    authenticationType: 'PowerPlatformEnvironment'
+    DownloadPath: 'c:\azpac-portals\downloads'
+    WebsiteId: 'a9e77e5c-8ab7-ed11-83fe-000d3adbbc34'
