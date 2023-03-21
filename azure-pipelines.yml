@@ -22,5 +22,7 @@ steps:
 - task: PowerPlatformToolInstaller@2
   inputs:
     DefaultVersion: true
-
+- task: PowerPlatformWhoAmi@2
+  inputs:
+    authenticationType: 'PowerPlatformEnvironment'
         
