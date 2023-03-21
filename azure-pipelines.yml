@@ -17,3 +17,17 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+
+
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Installs specific versions of the Power Platform Build Tools
+      - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.tool-installer.PowerPlatformToolInstaller@0
+        displayName: 'Power Platform Tool Installer'
+        inputs:
+          DefaultVersion: false
+          XrmToolingPackageDeploymentVersion: 3.3.0.928
