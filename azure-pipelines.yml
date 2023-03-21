@@ -19,8 +19,8 @@ steps:
   displayName: 'Run a multi-line script'
 
 
-# Installs default Power Platform Build Tools
-- task: microsoft-IsvExpTools.PowerPlatform-BuildTools.tool-installer.PowerPlatformToolInstaller@0
-  displayName: 'Power Platform Tool Installer'
+- task: PowerPlatformToolInstaller@2
+  inputs:
+    DefaultVersion: true
 
         
