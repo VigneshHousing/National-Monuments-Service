@@ -25,9 +25,10 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Installs specific versions of the Power Platform Build Tools
+      
       - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.tool-installer.PowerPlatformToolInstaller@0
-        displayName: Power Platform Tool Installer
+        displayName: 'Power Platform Tool Installer'
         inputs:
           DefaultVersion: false
           XrmToolingPackageDeploymentVersion: 3.3.0.928
+        
